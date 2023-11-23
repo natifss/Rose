@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>lâmpada inteligente rosie</title>
+</head>
+
+<body>
+    <h1>opções de cores para a lâmpada.</h1>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+        </div>
+
+        <script>
+            function toggleDarkMode() {
+                var body = document.body;
+                body.classList.toggle("dark-mode");
+            }
+        </script>
+
+        <div class="content">
+            <div class="card">
+                <h3>paleta RGB.</h3>
+                <p>o controle utilizado inicialmente
+                    <br> pela lâmpada possui cores na paleta RGB,
+                    <br> assim como a imagem apresentada ao lado.
+                </p>
+            </div>
+            <div class="card">
+                <h3>paleta RGB.</h3>
+                <img src="images/controle.png" alt="">
+            </div>

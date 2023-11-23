@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>sobre o aplicativo</title>
+</head>
+
+
+<h1>um pouco mais sobre o aplicativo!</h1>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="#">sobre</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+
+</nav>
+
+<div class="container">
+    <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+</div>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+
+<div class="content">
+    <div class="card">
+        <h3>um pouco sobre o aplicativo!</h3>
+        <p>este aplicativo foi criado juntamente de 
+            <br> um projeto do curso de sistemas de 
+            <br> informação. no qual consta em mesclar
+            <br> uma lâmpada que modifica as cores juntamente
+            <br> deste aplicativo, como uma forma de controle ainda mais remota.
+        </p>
+    </div>
+    <div class="card">
+        <h3>nosso grupo.</h3>
+        <img src="images/rosie-logo.png" alt="">
+        <p>grupo que consta em quatro integrantes.</p>
+    </div>
+
+<body>

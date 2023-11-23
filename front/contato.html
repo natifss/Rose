@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>lâmpada inteligente rosie</title>
+</head>
+
+<body>
+    <h1>contatos para mais informações e github.</h1>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+        </div>
+
+        <script>
+
+            const toggleButton = document.getElementById('toggleButton');
+            const body = document.body;
+
+            // Verificar se o usuário já selecionou o dark mode anteriormente
+            const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+            if (isDarkMode) {
+                enableDarkMode();
+            }
+
+
+            function toggleDarkMode() {
+                var body = document.body;
+                body.classList.toggle("dark-mode");
+            }
+
+            toggleButton.addEventListener('click', () => {
+                const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
+                if (darkModeEnabled) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+
+            function enableDarkMode() {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            }
+
+            function disableDarkMode() {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', null);
+            }
+
+
+        </script>
+
+        <div class="content">
+            <div class="card">
+                <h3>github.</h3>
+                <p>annaclarabragato</p>
+                <img src="images/github.png" alt="">
+            </div>
+
+            <div class="card">
+                <h3>github.</h3>
+                <p>natifss</p>
+                <img src="images/github.png" alt="">
+            </div>
+
+            <div class="card">
+                <h3>github.</h3>
+                <p>natifss</p>
+                <img src="images/github.png" alt="">
+            </div>
+
+            <div class="card">
+                <h3>github.</h3>
+                <p>natifss</p>
+                <img src="images/github.png" alt="">
+            </div>

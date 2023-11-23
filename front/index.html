@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lâmpada inteligente rosie</title>
+</head>
+
+<body>
+    <h1>conheça a lâmpada controlada por
+        <br> aplicativo e voz para a modificação de cores!
+    </h1>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+        </div>
+
+        <script>
+
+            // Verificar se o usuário já selecionou o dark mode anteriormente
+            const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+            if (isDarkMode) {
+                enableDarkMode();
+            }
+
+            toggleButton.addEventListener('click', () => {
+                const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
+                if (darkModeEnabled) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+
+            function enableDarkMode() {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            }
+
+            function disableDarkMode() {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', null);
+            }
+            
+            function toggleDarkMode() {
+                var body = document.body;
+                body.classList.toggle("dark-mode");
+            }
+
+
+        </script>
+
+        <div class="content">
+            <div class="card">
+                <h3>um pouco sobre o aplicativo!</h3>
+                <img src="images/botao-login-branco.png" alt="">
+                <p>mais informações sobre o nosso aplicativo.</p>
+                <span class="button"><a href="http://127.0.0.1:5500/sobre-aplicativo.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>opções de cores.</h3>
+                <img src="images/paleta-de-cores.png" alt="">
+                <p>a paleta de cores que você poderá utilizar no lâmpada.</p>
+                <span class="button"><a href="opcoes-cores.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>sobre login e cadastro.</h3>
+                <img src="images/imagem-login-branco.png" alt="">
+                <p>instruções para login e cadastro no aplicativo.</p>
+                <span class="button"><a href="logincadastro.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>sobre o projeto.</h3>
+                <img src="images/rosie-logo.png" alt="">
+                <p>um pouco sobre o grupo: Rosie.</p>
+                <span class="button"><a href="sobre-o-grupo.html">ver mais</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

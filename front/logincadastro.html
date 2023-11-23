@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>lâmpada inteligente rosie</title>
+</head>
+
+<body>
+    <h1>informações sobre login e cadastro.</h1>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="#">sobre</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+        </div>
+
+        <script>
+            function toggleDarkMode() {
+                var body = document.body;
+                body.classList.toggle("dark-mode");
+            }
+        </script>
+
+        <div class="content">
+            <div class="card">
+                <h3>informações para cadastro no aplicativo.</h3>
+                <p>para realizar o cadastro no aplicativo é
+                    <br> necessário os seguintes campos pessoais: 
+                    <br>nome completo, o e-mail, a senha e a confirmação 
+                    <br> da mesma. após isto, você poderá realizar o login 
+                    <br> da conta no aplicativo, e terá seu perfil. então, ao entrar
+                    <br> na aba "seu perfil" será possível colocar mais 
+                    <br> informações como: data de nascimento e seu país.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/cadastro.png" alt="">
+            </div>
