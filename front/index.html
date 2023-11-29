@@ -5,27 +5,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>lâmpada inteligente rosie</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Lâmpada Inteligente Rosie</title>
+    <style>
+
+        .cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .toggles {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle {
+            width: 2.7rem;
+            height: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.8rem;
+        }
+
+
+        .control {
+            width: 20rem;
+            margin: 0 auto;
+            padding: 28px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #EAEDF2;
+            box-shadow: inset -1px -1px 9px #FFFFFF;
+            border-radius: 2rem;
+
+        }
+
+
+        .control .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1em;
+            margin-top: 10px;
+        }
+        .control .buttons .button, .control .buttons .num-button  {
+            cursor: grab;
+            text-align: center;
+            width: 4.25rem;
+            height: 3.75rem;
+            display: grid;
+            place-content: center;
+            border-radius: 9px;
+            font-family: Rajdhani;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 51px;
+            box-shadow: -2px -3px 5px #FFFFFF, 4px 6px 16px rgba(65, 84, 179, 0.12);
+        }
+
+        .control .buttons .zero {
+            grid-column: 1/ 3;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow:  6px 6px 16px 0 rgba(209, 205, 199, .5),
+            -6px -6px 16px 0 rgba(255, 255, 255, .5);
+        }
+
+        .press {
+            background: #616774;
+        }
+        .action-btn {
+            color: grey;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #11E064;
+        }
+
+        .gray {
+            color: #6C7891;
+
+        }
+
+        .red {
+            color: white;
+            background: #FF8F8F;
+        }
+
+        .green {
+            color: white;
+            background: #11E064;
+
+        }
+
+        .blue {
+            color: white;
+            background: #2d6ae5;
+
+        }
+
+        .white {
+            color: black;
+        }
+
+
+        #clear {
+            color: #FF8F8F;
+        }
+
+
+    </style>
 </head>
 
 <body>
-    <h1>conheça a lâmpada controlada por
-        <br> aplicativo e voz para a modificação de cores!
-    </h1>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">home</a></li>
-                <li><a href="#">sobre</a></li>
-                <li><a href="contato.html">contato</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="sobre-o-grupo.html">sobre</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+    </nav>
+    <h1>Conheça a lâmpada controlada por aplicativo para a modificação de cores!</h1>
 
-        <div class="container">
-            <button id="dark-mode-btn" onclick="toggleDarkMode()">modo escuro</button>
+    <div class="cont">
+        <div class="control">
+            <div class="buttons">
+                <div id="desligaBrilho" class="button num-button success" ><i class="fa-solid fa-chevron-down"></i></div>
+                <div id="ligaBrilho"  class="button num-button success" ><i class="fa-solid fa-chevron-up"></i></div>
+                <div id="desligaLamp"  class="button num-button action-btn success"><i class="fa-regular fa-lightbulb"></i></div>
+                <div id="ligaLamp" class="button num-button action-btn success"><i class="fa-solid fa-lightbulb"></i></div>
+                <div id="ligaLedVermelho" class="button num-button  red">R</div>
+                <div id="ligaLedVerde" class="button num-button  green">G</div>
+                <div id="ligaLedAzul" class="button num-button  blue">B</div>
+                <div id="ligaLedBranco" class="button num-button action-btn success white">W</div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button  gray"></div>
+                <div id="ligaFade" class="button num-button action-btn success"><i class="fa-solid fa-circle-half-stroke"></i></div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button  gray"></div>
+                <div id="ligaFlash" class="button num-button action-btn success"><i class="fa-solid fa-bolt"></i></div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button point gray"></div>
+                <div class="button num-button point gray"></div>
+                <div class="button num-button point gray"></div>
+                <div class="button num-button  gray"></div>
+                <div class="button num-button point gray"></div>
+                <div class="button num-button point gray"></div>
+                <div class="button num-button point gray"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="content">
+            <div class="card">
+                <h3>Um pouco sobre o aplicativo!</h3>
+                <img src="images/botao-login-branco.png" alt="">
+                <p>Mais informações sobre o nosso aplicativo.</p>
+                <span class="button"><a href="sobre-aplicativo.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>Opções de cores.</h3>
+                <img src="images/paleta-de-cores.png" alt="">
+                <p>A paleta de cores que você poderá utilizar na lâmpada.</p>
+                <span class="button"><a href="opcoes-cores.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>Sobre login e cadastro.</h3>
+                <img src="images/imagem-login-branco.png" alt="">
+                <p>Instruções para login e cadastro no aplicativo.</p>
+                <span class="button"><a href="logincadastro.html">ver mais</a></span>
+            </div>
+            <div class="card">
+                <h3>Sobre o projeto.</h3>
+                <img src="images/rosie-logo.png" alt="">
+                <p>Um pouco sobre o grupo: Rosie.</p>
+                <span class="button"><a href="sobre-o-grupo.html">ver mais</a></span>
+            </div>
         </div>
 
-        <script>
+        <div class="container">
+            <button id="dark-mode-btn" onclick="toggleDarkMode()">Modo Escuro</button>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const body = document.querySelector('body');
+            const toggleButton = document.querySelector('#dark-mode-btn');
 
             // Verificar se o usuário já selecionou o dark mode anteriormente
             const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
@@ -35,60 +211,65 @@
             }
 
             toggleButton.addEventListener('click', () => {
-                const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
-                if (darkModeEnabled) {
-                    disableDarkMode();
-                } else {
-                    enableDarkMode();
-                }
+                toggleDarkMode();
             });
 
             function enableDarkMode() {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
+                const isDarkMode = body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
             }
 
-            function disableDarkMode() {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', null);
-            }
-            
             function toggleDarkMode() {
-                var body = document.body;
-                body.classList.toggle("dark-mode");
+                const isDarkMode = body.classList.toggle("dark-mode");
+                localStorage.setItem('darkMode', isDarkMode ? 'enabled' : null);
             }
+        })();
 
+    const btns = document.querySelectorAll(".num-button");
+    const allBtns = document.querySelectorAll(".button");
 
-        </script>
+    function handleCommand(id) {
+        console.log('==> id ==> ', id);
 
-        <div class="content">
-            <div class="card">
-                <h3>um pouco sobre o aplicativo!</h3>
-                <img src="images/botao-login-branco.png" alt="">
-                <p>mais informações sobre o nosso aplicativo.</p>
-                <span class="button"><a href="http://127.0.0.1:5500/sobre-aplicativo.html">ver mais</a></span>
-            </div>
-            <div class="card">
-                <h3>opções de cores.</h3>
-                <img src="images/paleta-de-cores.png" alt="">
-                <p>a paleta de cores que você poderá utilizar no lâmpada.</p>
-                <span class="button"><a href="opcoes-cores.html">ver mais</a></span>
-            </div>
-            <div class="card">
-                <h3>sobre login e cadastro.</h3>
-                <img src="images/imagem-login-branco.png" alt="">
-                <p>instruções para login e cadastro no aplicativo.</p>
-                <span class="button"><a href="logincadastro.html">ver mais</a></span>
-            </div>
-            <div class="card">
-                <h3>sobre o projeto.</h3>
-                <img src="images/rosie-logo.png" alt="">
-                <p>um pouco sobre o grupo: Rosie.</p>
-                <span class="button"><a href="sobre-o-grupo.html">ver mais</a></span>
-            </div>
-        </div>
-    </div>
+    }
 
+    btns.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            const id = btns[i].id;
+            handleCommand(id);
+        });
+    });
+
+    const boxShadowActivedButton =
+        "inset -1px -1px 1px rgba(255, 255, 255, 0.6), inset 2px 2px 5px #333945";
+    const boxShadowButton =
+        "6px 6px 16px 0 rgba(209, 205, 199, .5),-6px -6px 16px 0 rgba(255, 255, 255, .5)";
+    const textShadowActivedButton =
+        "2px 2px 2px rgba(0, 0, 0, 0.18), -1px -1px 2px rgba(255, 255, 255, 0.3)";
+
+    allBtns.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            let element = allBtns[i];
+            element.style.boxShadow = boxShadowActivedButton;
+
+            element.className += " press";
+            element.style.textShadow = textShadowActivedButton;
+            element.style.color = "#F1F3F6";
+            setTimeout(function () {
+                element.style.boxShadow = boxShadowButton;
+
+                element.style.textShadow = "";
+                element.style.color = "";
+                if (RegExp("action-btn-equals").test(button.className)) {
+                    element.style.background = "#11E064";
+                } else {
+                    element.className = element.className.replace(" press", "");
+                }
+            }, 250);
+        });
+    });
+    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
