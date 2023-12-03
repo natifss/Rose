@@ -19,6 +19,8 @@
 
   Desenvolvemos um sistema de controle web para uma lâmpada led RGD, estabelecendo comunicação entre o dispositivo NodeMCU via protocolo HTTP. O NodeMCU, por sua vez, se comunicava com a lâmpada por meio de infravermelho, proporcionando a capacidade de controle remoto de qualquer local, fugindo do alcance limitado do controle padrão fornecido com a lâmpada.
 
+  ![demo](https://github.com/natifss/Rosie/blob/main/demo.jpg)
+
 <div id="integrantes">
 <h2>Integrantes</h2>
 </div>
